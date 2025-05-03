@@ -76,65 +76,6 @@
 		});
 	}, { offset: '80%' });
 
-  var categoryFilter = '*', techFilter = '*';
-  var $container = $('.portfolio-container').isotope({
-    itemSelector: '.portfolio-item',
-    layoutMode: 'fitRows',
-    transitionDuration: '0.4s'
-  });
-
-  function applyCombinedFilters() {
-    // build filter selector for projects
-    var filterString;
-    if (categoryFilter === '*' && techFilter === '*') filterString = '*';
-    else if (categoryFilter === '*') filterString = techFilter;
-    else if (techFilter === '*') filterString = categoryFilter;
-    else filterString = techFilter.split(',').map(function(t) {
-      return categoryFilter + t;
-    }).join(',');
-
-    // count matching project items (exclude no-results)
-    var matchCount = $container.find('.portfolio-item').not('.no-results').filter(filterString).length;
-
-    // use isotope filter function to show projects and conditionally show no-results
-    $container.isotope({
-      filter: function() {
-        var $this = $(this);
-        if ($this.is('.no-results')) {
-          // show only when no projects match
-          return matchCount === 0;
-        }
-        return $this.is(filterString);
-      }
-    });
-  }
-
-  // Category filter click
-  $('#portfolio-flters').on('click', 'li', function() {
-    $('#portfolio-flters li').removeClass('active');
-    $(this).addClass('active');
-    categoryFilter = $(this).data('filter');
-    applyCombinedFilters();
-  });
-
-  // Tech stack multi-select
-  $('#tech-flters').on('click', 'li', function() {
-    var $this = $(this), val = $this.data('filter');
-    if (val === '*') {
-      $('#tech-flters li').removeClass('active');
-      $this.addClass('active'); techFilter = '*';
-    } else {
-      $this.toggleClass('active');
-      $('#tech-flters li[data-filter="*"]').removeClass('active');
-      var active = $('#tech-flters li.active').map(function(){ return $(this).data('filter'); }).get();
-      techFilter = active.length ? active.join(',') : '*';
-      if (techFilter === '*') $('#tech-flters li[data-filter="*"]').addClass('active');
-    }
-    applyCombinedFilters();
-  });
-
-  // initial layout
-  $(window).on('load', applyCombinedFilters);
 
 
 	// Back to top button

@@ -9512,4 +9512,55 @@ h6,
 .no-results p {
 	font-weight: 300;
 }
+.fab.fa-nextjs {
+  background: url('./../img/icon/nextjs.svg') no-repeat center;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  content: '';
+  color: transparent;
+}
+.fab.fa-mongodb {
+  background: url('./../img/icon/mongodb.svg') no-repeat center;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  content: '';
+  color: transparent;
+}
+.fab.fa-wordpress {
+	background: url('./../img/icon/wordpress.svg') no-repeat center;
+	background-size: contain;
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	content: '';
+	color: transparent;
+}
+
+.fab.fa-nextjs.fa-2x,
+.fab.fa-mongodb.fa-2x,
+.fab.fa-wordpress.fa-2x {
+  width:  2rem !important;
+  height: 2rem !important;
+}
+
+.fab.fa-html5 { color: #E34F26; }
+.fab.fa-css3-alt { color: #0095ff; }
+.fab.fa-js-square { color: #F7DF1E; }
+.fab.fa-react { color: #61DAFB; }
+.fab.fa-node-js { color: #26d426; }
+.fab.fa-python { color: #306998; }
+.fab.fa-angular { color: #DD0031; }
+.fab.fa-vuejs { color: #42B883; }
+.fab.fa-docker { color: #2496ED; }
+.fab.fa-php { color: #8993be; }
+.fab.fa-laravel { color: #FF2D20; }
+.fas.fa-database { color: #00618A; } /* MySQL */
+.fas.fa-project-diagram { color: #E34C26; } /* REST API */
+.fab.fa-chrome { color: #FF7139; } /* Placeholder for Firefox Extension */
+.fab.fa-nextjs { color: #000000; } /* unofficial - black */
+.fas.fa-code { color: #999999; } /* fallback */
 /*# sourceMappingURL=style.css.map */

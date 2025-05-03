@@ -1,0 +1,65 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Umpesl.com CMS",
+      "description": "A multilingual CMS platform developed for a sports equipment company using Next.js and Laravel.",
+      "image": "img/portfolio-1.jpg",
+      "category": "professional",
+      "technologies": ["nextjs", "laravel", "mysql"],
+      "links": {
+        "demo": "https://www.umpesl.com"
+      },
+      "isNew": false
+    },
+    {
+      "id": 2,
+      "title": "Court Booking System",
+      "description": "A high-volume court reservation system for Gopichand Academy handling over 5,000 bookings per month.",
+      "image": "img/portfolio-2.jpg",
+      "category": "professional",
+      "technologies": ["react", "php", "restapi"],
+      "links": {
+        "demo": "https://gopichandacademy.com"
+      },
+      "isNew": false
+    },
+    {
+      "id": 3,
+      "title": "Event Management System",
+      "description": "An event logistics management system developed in Core PHP, later scaled into a white-label SaaS solution.",
+      "image": "img/portfolio-3.jpg",
+      "category": "professional",
+      "technologies": ["html5", "css3", "js", "php", "mysql"],
+      "links": {
+        "demo": "https://www.umpesl.com",
+        "github": "https://github.com"
+      },
+      "isNew": false
+    },
+    {
+      "id": 4,
+      "title": "YouTube Extension",
+      "description": "A Firefox browser extension that personalizes the YouTube experience based on user preferences.",
+      "image": "img/portfolio-4.jpg",
+      "category": "personal",
+      "technologies": ["js", "extension"],
+      "links": {
+        "github": "https://github.com/Ls6375/PersonalisedYoutubeExtension"
+      },
+      "isNew": false
+    },
+		{
+			"id": 5,
+			"title": "E-commerce Platform",
+			"description": "An e-commerce platform developed using Laravel and Vue.js, featuring a custom CMS.",
+			"image": "img/portfolio-6.jpg",
+			"category": "professional",
+			"technologies": ["wordpress"],
+			"links": {
+				"demo": "https://indianmotorush.com/"
+			},
+			"isNew": false
+		}
+  ]
+}
