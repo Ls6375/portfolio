@@ -166,6 +166,7 @@ function createProjectCard(project) {
         <img src="${project.image}"
              class="card-img-top img-fluid rounded-top"
              alt="${project.title || ''}">
+						 <hr class="m-0 p-0"/>
         <div class="portfolio-btn rounded-top d-flex align-items-center justify-content-center">
           <a href="./project-detail.html?id=${project.id}">
             <i class="fas fa-eye text-white fa-3x"></i>
@@ -203,27 +204,37 @@ function createProjectCard(project) {
   // Demo and GitHub buttons (only if links exist)
   let demoButton = '';
   let githubButton = '';
+  let detailsButton = '';
   if (project.links) {
     if (project.links.demo) {
       demoButton = `
         <a href="${project.links.demo}" target="_blank" rel="noopener"
-           class="btn btn-sm btn-primary mr-2 mb-2">
-          <i class="fas fa-external-link-alt"></i> Live Demo
+           class="btn btn-sm btn-primary mr-2 mb-2 px-3 py-1">
+          <i class="fas fa-link"></i> Live Demo
         </a>`;
     }
+		if (project.links.details) {
+      detailsButton = `
+        <a href="${project.links.details}" target="_blank" rel="noopener"
+					class="btn btn-sm  btn-outline-dark mr-2 mb-2 px-2 py-1">
+					<i class="fas fa-info-circle"></i> Details
+				</a>`;
+    }
+
     if (project.links.github) {
       githubButton = `
         <a href="${project.links.github}" target="_blank" rel="noopener"
-					class="btn btn-sm btn-outline-dark mr-2 mb-2">
+					class="btn btn-sm  btn-outline-dark mr-2 mb-2  px-2 py-1">
 					<i class="fab fa-github"></i> GitHub
 				</a>`;
     }
   }
-  const footerButtons = (demoButton || githubButton)
+  const footerButtons = (demoButton || githubButton || detailsButton)
     ? `
       <div class="card-footer bg-white border-0 pt-3 pb-4">
         <div class="d-flex flex-wrap align-items-center">
           ${demoButton}
+          ${detailsButton}
           ${githubButton}
         </div>
       </div>`
@@ -235,7 +246,12 @@ function createProjectCard(project) {
       ${imgHtml}
       <div class="card-body pb-0">
         <div class="d-flex flex-wrap justify-content-between">
-          <h5 class="card-title mb-2">${project.title || ''}</h5>
+				<h5 class="card-title mb-2">
+					<a href="${project.links?.demo || '#'}" target="_blank" class=" text-dark">
+					${project.title || ''}
+					<i class="fas fa-link ml-1" style="font-size: 0.8em;"></i>
+					</a>
+				</h5>
           ${newBadge}
         </div>
         ${descHtml}
@@ -266,8 +282,10 @@ function getTechIconClass(tech) {
     restapi:   'fas fa-project-diagram text-danger',
     php:       'fab fa-php',
     mongodb:       'fab fa-mongodb',
-    "extension": 'fab fa-chrome',
+    extension: 'fab fa-chrome',
 		wordpress: 'fab fa-wordpress',
+		"aws-s3": 'fab fa-aws',
+		"aws": 'fab fa-aws ',
   };
   return icons[tech] || 'fas fa-code';
 }

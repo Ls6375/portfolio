@@ -6103,6 +6103,12 @@ button.bg-dark:focus {
   border-radius: 50rem !important;
 }
 
+@media (min-width: 768px) {
+  .rounded-pill-md {
+    border-radius: 50rem !important;
+  }
+}
+
 .rounded-0 {
   border-radius: 0 !important;
 }
@@ -9539,6 +9545,18 @@ h6,
 	content: '';
 	color: transparent;
 }
+
+.fab.fa-aws, .fab.fa-aws-s3  {
+	background: url('https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg') no-repeat center;
+	background-size: contain;
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	content: '';
+	color: transparent;
+}
+
+
 
 .fab.fa-nextjs.fa-2x,
 .fab.fa-mongodb.fa-2x,

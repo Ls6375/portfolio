@@ -2,9 +2,9 @@
   "projects": [
     {
       "id": 1,
-      "title": "Umpesl.com CMS",
-      "description": "A multilingual CMS platform developed for a sports equipment company using Next.js and Laravel.",
-      "image": "img/portfolio-1.jpg",
+      "title": "Umpesl CMS",
+      "description": "A custom content management platform built with Next.js and Laravel, featuring an intuitive admin panel for real-time content updates and a fully integrated job board for recruiting.",
+      "image": "img/project/umpesl.webp",
       "category": "professional",
       "technologies": ["nextjs", "laravel", "mysql"],
       "links": {
@@ -15,8 +15,8 @@
     {
       "id": 2,
       "title": "Court Booking System",
-      "description": "A high-volume court reservation system for Gopichand Academy handling over 5,000 bookings per month.",
-      "image": "img/portfolio-2.jpg",
+      "description": "A high-volume sports court reservation system for Gopichand Academy handling over 5,000 bookings per month.",
+      "image": "img/project/gopichandacademy.webp",
       "category": "professional",
       "technologies": ["react", "php", "restapi"],
       "links": {
@@ -27,13 +27,12 @@
     {
       "id": 3,
       "title": "Event Management System",
-      "description": "An event logistics management system developed in Core PHP, later scaled into a white-label SaaS solution.",
-      "image": "img/portfolio-3.jpg",
+      "description": "Event management SaaS platform tailored for exhibition organizers to streamline operations and attendee handling.",
+      "image": "img/project/umpesl.webp",
       "category": "professional",
       "technologies": ["html5", "css3", "js", "php", "mysql"],
       "links": {
-        "demo": "https://www.umpesl.com",
-        "github": "https://github.com"
+        "demo": "https://www.umpesl.com"
       },
       "isNew": false
     },
@@ -41,7 +40,7 @@
       "id": 4,
       "title": "YouTube Extension",
       "description": "A Firefox browser extension that personalizes the YouTube experience based on user preferences.",
-      "image": "img/portfolio-4.jpg",
+      "image": "img/project/indianmotorush.webp",
       "category": "personal",
       "technologies": ["js", "extension"],
       "links": {
@@ -52,12 +51,24 @@
 		{
 			"id": 5,
 			"title": "E-commerce Platform",
-			"description": "An e-commerce platform developed using Laravel and Vue.js, featuring a custom CMS.",
-			"image": "img/portfolio-6.jpg",
+			"description": "Developed a custom WordPress + WooCommerce e-commerce platform for Indian Moto Rush, specializing in motorcycle gear and accessories.",
+			"image": "img/project/indianmotorush.webp",
 			"category": "professional",
 			"technologies": ["wordpress"],
 			"links": {
 				"demo": "https://indianmotorush.com/"
+			},
+			"isNew": false
+		},
+		{
+			"id": 6,
+			"title": "Aurobindo Corporate Portal",
+			"description": "Engineered a high-performance corporate portal for Aurobindo Pharma using Next.js and Node.js, with AWS S3 integration for seamless delivery of extensive PDF assets.",
+			"image": "img/project/aurobindo.webp",
+			"category": "professional",
+			"technologies": ["nextjs", "nodejs", "aws-s3"],
+			"links": {
+				"demo": "https://www.aurobindo.com"
 			},
 			"isNew": false
 		}
