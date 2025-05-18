@@ -9581,4 +9581,9 @@ h6,
 .fab.fa-chrome { color: #FF7139; } /* Placeholder for Firefox Extension */
 .fab.fa-nextjs { color: #000000; } /* unofficial - black */
 .fas.fa-code { color: #999999; } /* fallback */
+
+.img-custom-shadow {
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
 /*# sourceMappingURL=style.css.map */

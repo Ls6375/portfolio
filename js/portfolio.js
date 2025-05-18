@@ -159,21 +159,26 @@ function createProjectCard(project) {
   ].join(' ').trim();
 
   // Image block (only if project.image exists)
-  let imgHtml = '';
-  if (project.image) {
-    imgHtml = `
-      <div class="position-relative">
-        <img src="${project.image}"
-             class="card-img-top img-fluid rounded-top"
-             alt="${project.title || ''}">
-						 <hr class="m-0 p-0"/>
-        <div class="portfolio-btn rounded-top d-flex align-items-center justify-content-center">
-          <a href="./project-detail.html?id=${project.id}">
-            <i class="fas fa-eye text-white fa-3x"></i>
-          </a>
-        </div>
-      </div>`;
-  }
+	let imgHtml = '';
+	if (project.image) {
+		imgHtml = `
+			<div class="position-relative">
+				<img src="${project.image}"
+						 class="card-img-top img-fluid rounded-top"
+						 alt="${project.title || ''}">
+				<hr class="m-0 p-0"/>
+				<div class="portfolio-btn rounded-top d-flex align-items-center justify-content-center">`;
+	
+		if (project.links?.demo || project.links?.github) {
+			imgHtml += `
+					<a href="${project.links.github || project.links.demo}" target="_blank">
+						<i class="fas fa-eye text-white fa-3x"></i>
+					</a>`;
+		}
+	
+		imgHtml += `</div></div>`;
+	}
+	
 
   // "New!" badge (only if isNew flag is truthy)
   const newBadge = project.isNew ? '<span class="badge badge-primary">New!</span>' : '';
@@ -240,25 +245,34 @@ function createProjectCard(project) {
       </div>`
     : '';
 
-  // Assemble the final card HTML
-  div.innerHTML = `
-    <div class="card border-0 shadow-lg h-100">
-      ${imgHtml}
-      <div class="card-body pb-0">
-        <div class="d-flex flex-wrap justify-content-between">
-				<h5 class="card-title mb-2">
-					<a href="${project.links?.demo || '#'}" target="_blank" class=" text-dark">
-					${project.title || ''}
-					<i class="fas fa-link ml-1" style="font-size: 0.8em;"></i>
-					</a>
-				</h5>
-          ${newBadge}
-        </div>
-        ${descHtml}
-        ${techBadges}
-      </div>
-      ${footerButtons}
-    </div>`;
+  // Final card HTML
+	div.innerHTML = (() => {
+		const hasDemo = Boolean(project.links?.demo);
+		const titleContent = hasDemo
+			? `<a href="${project.links.demo}" target="_blank" class="text-dark">
+					 ${project.title || ''}
+					 <i class="fas fa-link ml-1" style="font-size: 0.8em;"></i>
+				 </a>`
+			: `${project.title || ''}`;
+	
+		return `
+			<div class="card border-0 shadow-lg h-100">
+				${imgHtml}
+				<div class="card-body pb-0">
+					<div class="d-flex flex-wrap justify-content-between">
+						<h5 class="card-title mb-2">
+							${titleContent}
+						</h5>
+						${newBadge}
+					</div>
+					${descHtml}
+					${techBadges}
+				</div>
+				${footerButtons}
+			</div>
+		`;
+	})();
+	
 
   return div;
 }

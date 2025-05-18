@@ -11,21 +11,26 @@
 	});
 
 
-	// Smooth scrolling on the navbar links
-	$(".navbar-nav a").on('click', function (event) {
+	$("a[href^='#']").on("click", function (event) {
 		if (this.hash !== "") {
 			event.preventDefault();
-
-			$('html, body').animate({
-				scrollTop: $(this.hash).offset().top - 45
-			}, 1500, 'easeInOutExpo');
-
-			if ($(this).parents('.navbar-nav').length) {
-				$('.navbar-nav .active').removeClass('active');
-				$(this).closest('a').addClass('active');
+	
+			$("html, body").animate(
+				{
+					scrollTop: $(this.hash).offset().top - 45, // Adjust offset as needed
+				},
+				1500, // Duration in milliseconds
+				"easeInOutExpo" // Easing function
+			);
+	
+			// Update active class in navbar if applicable
+			if ($(this).parents(".navbar-nav").length) {
+				$(".navbar-nav .active").removeClass("active");
+				$(this).closest("a").addClass("active");
 			}
 		}
 	});
+	
 
 
 	// Typed Initiate
@@ -42,21 +47,21 @@
 
 
 	// Modal Video
-	$(document).ready(function () {
-		var $videoSrc;
-		$('.btn-play').click(function () {
-			$videoSrc = $(this).data("src");
-		});
-		console.log($videoSrc);
+	// $(document).ready(function () {
+	// 	var $videoSrc;
+	// 	$('.btn-play').click(function () {
+	// 		$videoSrc = $(this).data("src");
+	// 	});
+	// 	console.log($videoSrc);
 
-		$('#videoModal').on('shown.bs.modal', function (e) {
-			$("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-		})
+	// 	$('#videoModal').on('shown.bs.modal', function (e) {
+	// 		$("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+	// 	})
 
-		$('#videoModal').on('hide.bs.modal', function (e) {
-			$("#video").attr('src', $videoSrc);
-		})
-	});
+	// 	$('#videoModal').on('hide.bs.modal', function (e) {
+	// 		$("#video").attr('src', $videoSrc);
+	// 	})
+	// });
 
 
 	// Scroll to Bottom

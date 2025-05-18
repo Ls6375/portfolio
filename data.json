@@ -28,11 +28,11 @@
       "id": 3,
       "title": "Event Management System",
       "description": "Event management SaaS platform tailored for exhibition organizers to streamline operations and attendee handling.",
-      "image": "img/project/umpesl.webp",
+      "image": "img/project/event.webp",
       "category": "professional",
       "technologies": ["html5", "css3", "js", "php", "mysql"],
       "links": {
-        "demo": "https://www.umpesl.com"
+        "demo": "http://dic.vaexhibitions.com/"
       },
       "isNew": false
     },
@@ -40,7 +40,7 @@
       "id": 4,
       "title": "YouTube Extension",
       "description": "A Firefox browser extension that personalizes the YouTube experience based on user preferences.",
-      "image": "img/project/indianmotorush.webp",
+      "image": "img/project/extension.webp",
       "category": "personal",
       "technologies": ["js", "extension"],
       "links": {
@@ -50,7 +50,7 @@
     },
 		{
 			"id": 5,
-			"title": "E-commerce Platform",
+			"title": "Indianmotorush E-commerce",
 			"description": "Developed a custom WordPress + WooCommerce e-commerce platform for Indian Moto Rush, specializing in motorcycle gear and accessories.",
 			"image": "img/project/indianmotorush.webp",
 			"category": "professional",
@@ -69,6 +69,30 @@
 			"technologies": ["nextjs", "nodejs", "aws-s3"],
 			"links": {
 				"demo": "https://www.aurobindo.com"
+			},
+			"isNew": false
+		},
+		{
+			"id": 7,
+			"title": "Travline Visa Services",
+			 "description": "A WordPress-powered visa service platform integrating Advanced Custom Fields (ACF) to enhance content management flexibility. This solution enables users to book visa services seamlessly.",
+   		"image": "img/project/travline.webp",
+			"category": "travel",
+			"technologies": ["wordpress"],
+			"links": {
+					"demo": "https://travline.in/"
+			},
+			"isNew": false
+		},
+		{
+			"id": 8,
+			"title": "Ox Pro Media",
+			"description": "A digital agency offering innovative marketing solutions including social media marketing, SEO, and website development.",
+			"image": "img/project/oxpro.webp",
+			"category": "marketing",
+			"technologies": ["html5", "css3", "php", "mysql"],
+			"links": {
+					"demo": "https://oxpromedia.com/"
 			},
 			"isNew": false
 		}
